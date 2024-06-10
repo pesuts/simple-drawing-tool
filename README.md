@@ -56,7 +56,7 @@ Aplikasi Drawing Tool ini dikembangkan sebagai bagian dari Tugas Akhir untuk mat
 
 1. Clone repository ini:
    ```sh
-   git clone https://github.com/username/professional-drawing-application.git
+   git clone https://github.com/pesuts/simple-drawing-tool.git
    ```
 2. Buka file `index.html` di browser untuk menjalankan aplikasi.
 
