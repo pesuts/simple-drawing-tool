@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrollbars */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  background-color: #f7f7f7;
+}
+header {
+  grid-column: 1 / span 3;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+#toolbar, #rightToolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow-y: auto; /* Allow scrolling within the toolbars if needed */
+}
+#toolbar {
+  grid-column: 1 / 2;
+  align-items: center;
+  position: relative;
+}
+#rightToolbar {
+  grid-column: 3 / 4;
+  align-items: center;
+}
+#toolbar button, #toolbar input, #toolbar select,
+#rightToolbar button, #rightToolbar input, #rightToolbar select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+#toolbar button:hover, #toolbar input:hover, #toolbar select:hover,
+#rightToolbar button:hover, #rightToolbar input:hover, #rightToolbar select:hover {
+  background-color: #f1f1f1;
+}
+#toolbar button.active {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+#toolbar label, #rightToolbar label {
+  margin-bottom: 5px;
+  align-self: flex-start;
+}
+#toolbar #clearButton {
+  background-color: #f44336;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+  width: 90%;
+}
+#drawingCanvas {
+  grid-column: 2 / 3;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  align-self: center;
+}
+.double-input {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.double-input label, .double-input input {
+  flex: 1;
+}
+#toolbar #colorPicker{
+padding: 0;
+}
+
+#colorPicker{
+width: 50px;
+height: 50px;
+}
